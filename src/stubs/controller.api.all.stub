@@ -1,0 +1,70 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Models\{modelName};
+use Illuminate\Http\Request;
+use App\Http\Requests\{folder}\{modelName}Request;
+use App\Http\Controllers\Controller;
+
+class {controllerName} extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return {modelName}::paginate();
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  \$request
+     * @return \Illuminate\Http\Response
+     */
+    public function store({modelName}Request $request)
+    {
+        return {modelName}::create($request->validated());
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  \$id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return {modelName}::findOrFail($id);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  \$request
+     * @param  int  \$id
+     * @return \Illuminate\Http\Response
+     */
+    public function update({modelName}Request $request, $id)
+    {
+        $model = {modelName}::findOrFail($id);
+        $model->update($request->all());
+        return $model;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  \$id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $model = {modelName}::findOrFail($id);
+        $model->delete();
+        return ['success' => true];
+    }
+}
