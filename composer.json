@@ -1,5 +1,5 @@
 {
-    "name": "FadlLabanie/CrudApiGenerator",
+    "name": "FadlLabanie/crud-api-generator",
     "description": "A description of your package.",
     "type": "library",
     "keywords": ["laravel", "package"],
