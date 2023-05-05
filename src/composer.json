@@ -20,5 +20,11 @@
         "psr-4": {
             "FadlLabanie\\CrudApiGenerator\\": "src/"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
     }
+    
 }
