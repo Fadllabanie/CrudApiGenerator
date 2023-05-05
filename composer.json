@@ -1,0 +1,30 @@
+{
+    "name": "FadlLabanie/CrudApiGenerator",
+    "description": "A description of your package.",
+    "type": "library",
+    "keywords": ["laravel", "package"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fadl Labanie",
+            "email": "labanie.fadl@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "^8.0",
+        "illuminate/database": "^8.0",
+        "your-dependencies": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FadlLabanie\\CrudApiGenerator\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+    
+}
